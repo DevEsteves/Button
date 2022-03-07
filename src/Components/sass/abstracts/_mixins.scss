@@ -1,0 +1,20 @@
+@mixin measures($top, $width, $left, $height, $bottom, $right){
+    top: $top;
+    width: $width;
+    left: $left;
+    height: $height;
+    bottom: $bottom;
+    right: $right;
+}
+
+@mixin posicao{
+    position: absolute;
+}
+
+@mixin background($background){
+    background: $background;
+}
+
+@mixin textColor($textColor){
+    color: $textColor;
+}
