@@ -41,7 +41,7 @@ class Button extends React.Component {
     return(<input
           type="text"
           placeholder="email"
-          maxlength="8"
+          maxLength="8"
           value={this.state.email}
           onChange={this.handleEmailChange}
         />)
@@ -51,7 +51,7 @@ class Button extends React.Component {
     return(<input
           type="text"
           placeholder="password"
-          maxlength="8"
+          maxLength="8"
           value={this.state.password}
           onChange={this.handlePasswordChange}
         />)
