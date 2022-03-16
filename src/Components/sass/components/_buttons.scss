@@ -1,41 +1,32 @@
 .botao-verde button{
     @include measures($buttonTop,$buttonWidth,$buttonLeft,$buttonHeight,0,0);
-    @include posicao;
+    @include posição;
     @extend %button-font;
     @include background($botaoVerdeBackground);
     @include textColor($botaoVerdeTextColor);
+    &:hover{
+        background: $botaoVerdeHover;
+    }
+    &:active{
+        background: $botaoVerdeActive;
+    }
 }
 
 .botao-amarelo button{
     @include measures($buttonTop,$buttonWidth,$buttonLeft,$buttonHeight,0,0);
-    @include posicao;
+    @include posição;
     @extend %button-font;
     @include background($botaoAmareloBackground);
     @include textColor($botaoAmareloTextColor);
+    &:hover{
+        background: $botaoAmareloHover;
+    }
+    &:active{
+        background: $botaoAmareloActive;
+    }
 }
 
-.botao-amarelo button:hover{
-    background: $botaoAmareloHover;
-}
-
-.botao-verde button:hover{
-    background: $botaoVerdeHover;
-}
-
-.botao-amarelo button:active{
-    background: $botaoAmareloActive;
-}
-
-.botao-verde button:active{
-    background: $botaoVerdeActive;
-}
-
-.botao-verde button svg{
-    @include measures($svgTop, $svgWidth, $svgLeft, $svgHeight, $svgBottom, $svgRight);
-    @include posição;
-}
-
-.botao-amarelo button svg{
+.botao-verde button svg, .botao-amarelo button svg{
     @include measures($svgTop, $svgWidth, $svgLeft, $svgHeight, $svgBottom, $svgRight);
     @include posição;
 }

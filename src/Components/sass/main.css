@@ -17,6 +17,12 @@
   background: #026C00;
   color: #FFFFFF;
 }
+.botao-verde button:hover {
+  background: #079504;
+}
+.botao-verde button:active {
+  background: #013C00;
+}
 
 .botao-amarelo button {
   top: 547px;
@@ -29,24 +35,14 @@
   background: #F7C346;
   color: #000000;
 }
-
 .botao-amarelo button:hover {
   background: #FFDF77;
 }
-
-.botao-verde button:hover {
-  background: #079504;
-}
-
 .botao-amarelo button:active {
   background: #DCAC0D;
 }
 
-.botao-verde button:active {
-  background: #013C00;
-}
-
-.botao-verde button svg {
+.botao-verde button svg, .botao-amarelo button svg {
   top: 35%;
   width: 14.7878789902px;
   left: 90%;
@@ -56,27 +52,7 @@
   position: absolute;
 }
 
-.botao-amarelo button svg {
-  top: 35%;
-  width: 14.7878789902px;
-  left: 90%;
-  height: 16px;
-  bottom: 0%;
-  right: -90%;
-  position: absolute;
-}
-
-.botao-verde input {
-  top: 447px;
-  width: 111px;
-  left: 109px;
-  height: 16px;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-}
-
-.botao-amarelo input {
+.botao-verde input, .botao-amarelo input {
   top: 447px;
   width: 111px;
   left: 109px;
