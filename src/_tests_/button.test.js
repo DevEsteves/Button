@@ -9,7 +9,7 @@ it('botão primário como padrão', () => {
   expect(<Button primary/>).toBeTruthy();
 });
 
-it('Elemento button funciona', () => {
+describe('Elemento button funciona', () => {
   render(<Button/>);
   fireEvent.click(screen.getByText(/text/i));
 });
