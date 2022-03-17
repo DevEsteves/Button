@@ -7,12 +7,16 @@ import {ReactComponent as RefreshIcon} from '../Components/Icons/RefreshIcon.svg
 it('botão primário como padrão', () => {
   render(<Button/>)
   expect(<Button primary/>).toBeTruthy();
+});
 
+it('Elemento button funciona', () => {
+  render(<Button/>);
+  fireEvent.click(screen.getByText(/text/i));
 });
 
 describe('Arrow Right renderiza', () => {
   render(<ArrowRight/>);
-})
+});
 
 describe('Check renderiza', () => {
   render(<Check/>);
