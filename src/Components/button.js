@@ -57,43 +57,62 @@ class Button extends React.Component {
         />)
   }
 
+  isEmailDisabled = () => {
+    if(!this.state.email.length > this.state.disabled){
+      return true;
+    }
+  }
+
+  isPasswordDisabled = () => {
+    if(!this.state.password.length > this.state.disabled){
+      return true;
+    }
+  }
+
+  isCheck = () => {
+    if(this.state.email.length === this.state.check || 
+      this.state.password.length === this.state.check){
+      return true;
+    }
+  }
+
+  isArrowRight = () => {
+    if(this.state.email.length === this.state.arrowRight ||
+       this.state.password.length === this.state.arrowRight){
+      return true;
+    }
+  }
+
   render() {
     
     return (
       <> {/* Operação ternária para alternar os botões*/}
       {this.state.primary ? (<div className='botao-verde'> 
         {this.inputGreenButton()}
-        <button disabled={!this.state.email > this.state.disabled} 
+        <button disabled={this.isEmailDisabled()}
           onClick={() => {this.handleClick(); this.resetInput()}}
-          style={{background: !this.state.email > this.state.disabled ? '#B7D0B6' : ''}}>
+          style={{background: this.isEmailDisabled() ? '#B7D0B6' : ''}}>
            {this.state.buttonText}
-           {this.state.email.length === this.state.arrowRight ? 
-            (<ArrowRight fill="white"/>) : null}
-           {!(this.state.email.length === this.state.check)
-            && !(this.state.email.length === this.state.arrowRight)
-            && !(this.state.email.length === this.state.disabled) ? 
-            (<Refresh fill="white"/>) : null}
-            {this.state.email.length === this.state.check ? (<Check fill="white"/>) : null}
+           {this.isArrowRight() ? (<ArrowRight fill="white"/>) : null}
+           {!this.isEmailDisabled() && !this.isCheck() && !this.isArrowRight() ? 
+           (<Refresh fill="white"/>) : null}
+            {this.isCheck() ? (<Check fill="white"/>) : null}
         </button>
       </div>)
       :
       (<div className='botao-amarelo'>
         {this.inputYellowButton()}
-        <button disabled={!this.state.password.length > this.state.disabled} 
-          onClick={this.handleClick} 
-          style={{background:
-           !this.state.password.length > this.state.disabled ? '#FFDF77' : ''}}>
-            {this.state.buttonText}
-            {this.state.password.length === this.state.arrowRight ?
-              (<ArrowRight fill="black"/>) : null}
-               {this.state.password.length > this.state.disabled 
-              && !(this.state.password.length === this.state.check)
-              && !(this.state.password.length === this.state.arrowRight) ? 
-              (<Refresh fill="black"/>) : null}
-               {this.state.password.length === this.state.check ?(<Check fill="black"/>) : null}
+        <button disabled={this.isPasswordDisabled()}
+          onClick={() => {this.handleClick(); this.resetInput()}} 
+          style={{background: this.isPasswordDisabled() ? '#FFDF77' : ''}}>
+           {this.state.buttonText}
+           {this.isArrowRight() ? (<ArrowRight fill="black"/>) : null}
+           {!this.isPasswordDisabled() && !this.isCheck() && !this.isArrowRight() ? 
+           (<Refresh fill="black"/>) : null}
+            {this.isCheck() ? (<Check fill="black"/>) : null}
         </button>
       </div>
-    )}
+      )}
       </>
     )
   }
