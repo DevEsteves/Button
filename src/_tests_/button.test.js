@@ -14,6 +14,28 @@ describe('Elemento button funciona', () => {
   fireEvent.click(screen.getByText(/text/i));
 });
 
+describe('green button input value', () => {
+  it('updates on change', () => {
+    render(<Button/>)
+
+    const searchInput = screen.getByTestId('greenButtonInput');
+
+    fireEvent.change(searchInput, {target: {value: "test"}})
+    expect(searchInput.value).toBe("test")
+  }) 
+})
+
+describe('yellow button input value', () => {
+  it('updates on change', () => {
+    render(<Button/>)
+
+    const searchInput = screen.getByTestId('greenButtonInput');
+
+    fireEvent.change(searchInput, {target: {value: "testing"}})
+    expect(searchInput.value).toBe("testing")
+  }) 
+})
+
 describe('Arrow Right renderiza', () => {
   render(<ArrowRight/>);
 });

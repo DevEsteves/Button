@@ -38,7 +38,7 @@ class Button extends React.Component {
   }
   
   inputGreenButton = () => {
-    return(<input
+    return(<input data-testid="greenButtonInput"
           type="text"
           placeholder="email"
           maxLength="8"
@@ -48,7 +48,7 @@ class Button extends React.Component {
   }
 
   inputYellowButton = () => {
-    return(<input
+    return(<input data-testid="yellowButtonInput"
           type="text"
           placeholder="password"
           maxLength="8"
