@@ -27,7 +27,6 @@ function Button({children, color, icon, disabled, primary, onClick}) {
     return (
       <> {/* Operação ternária para alternar os botões*/}
       <div className={primary === true ? 'botao-verde' : 'botao-amarelo'}>
-            {console.log(primary)}
           <button data-testid="green-button"
             disabled={disabled ? true : false}
             onClick={onClick}
