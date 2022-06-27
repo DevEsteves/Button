@@ -4,7 +4,6 @@ import { Container } from './Components/Button/Container-styles'
 import { ContainerButtons } from './Components/Button/ContainerButtons-styles';
 import { Text } from './Components/Text/Text'
 import { PageTitle } from './Components/Text/Text'
-import styled from 'styled-components';
 import { GlobalStyle } from './styles/global'
 
 function App() {
