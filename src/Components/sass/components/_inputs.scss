@@ -1,9 +1,0 @@
-.botao-verde input{
-    @include measures($inputTop, $inputWidth, $inputLeft, $inputHeight,0,0);
-    @include posicao;
-}
-
-.botao-amarelo input{
-    @include measures($inputTop, $inputWidth, $inputLeft, $inputHeight,0,0);
-    @include posicao;
-}
