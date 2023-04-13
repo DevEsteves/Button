@@ -5,8 +5,8 @@ Este Repositório contém um aplicativo criado em React para o manuseio de um bo
 # Rodando Localmente
 
 ```
-$ git clone https://github.com/DevEsteves/ButtonReact.git
-$ cd ButtonReact 
+$ git clone https://github.com/DevEsteves/Button.git
+$ cd Button 
 $ npm install
 $ npm run start
 ```
